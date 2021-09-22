@@ -1,39 +1,46 @@
-<!DOCTYPE=HTML>
+<!doctype html>
 <html>
-    <title>Get Rich Quick: Interest Calculator</title>
-    <head>
+
+  <head>
+
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="maindiv">
-        <h1>Simple Interest Calculator</h1>
+  </head>
+   <div class="maindiv" >
+  <body>
+    <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="range"  id="rate" id="rate" min=1 max=20 step=0.25 value="default_val"><span id=""rate_val">10.25%</span>  <br/>
-        No. of Years <select id="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-</select> <br/>
-        Interest : <span id="result"></span><br>
+  Amount: <input type="number" id="principal" onchange = "validatePrincipal(this);"> <br />
+  <br />
+  Interest Rate:
 
-        <button onclick="compute()">Compute</button>
-        <span id="result"></span>
-            <footer>
-
-        &#169; This Calculator belongs to Tom Carnay
+   <input id="intrate" type="range" class="slider" min="0" max="20" step="0.1" value="10.25" oninput="update_rate(this);" />
+   </span>
+   <span>
+     <label id="percent">10.25 %</label>
+   </span>
+   <div class = "date">
 
 
-            </footer>
-        </div>
-    </body>
+  <span class="slidecontainer"></span><br />
+  No. of Years: <input type="number" id="years"><br />
+  <span id="result"></span><br>
+
+  <button onclick="compute()">Compute Interest</button><br />
+<br />
+       </div>
+<div class="results">
+  <label id = "rprincipal"></label><br />
+  <label id = "rintrate"></label><br />
+  <label id = "rinterest"></label><br />
+  <label id = "ryears"></label>
+  <label id = "rdate"></label><br />
+</div>
+<br /><br /><br />
+
+
+  </body>
+</maindiv>
 
 </html>
+<footer> &copy; Tom Carnay </footer>
