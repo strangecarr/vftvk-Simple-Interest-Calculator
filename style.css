@@ -17,6 +17,7 @@ h1{
     padding:20px;
     display:flex;
     align-items:center;
+    overflow:hidden
 }
 
 
