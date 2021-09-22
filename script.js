@@ -20,7 +20,7 @@ function compute() {
 //validate principal
 function validatePrincipal(that){
 if (that.value < 1 ){
-	alert("Enter a Positive number");  //must be greater than or eqqual to one
+	alert("Enter a Positive number");  //must be greater than or equal to one
 	that.value = " ";
 	that.focus();  //bring focus back to principal if number is incorrect
 	}
